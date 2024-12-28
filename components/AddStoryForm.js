@@ -13,6 +13,11 @@ const AddStoryForm = ({ addStory }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        if (!title || !story) {
+            alert("Please enter a title and a story");
+            return;
+        }
+
         const actualDate =
             new Date().getDate() + "/"
             + (new Date().getMonth() + 1) + "/"
