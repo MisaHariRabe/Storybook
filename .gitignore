@@ -1,0 +1,55 @@
+# Compiled object files
+*.o
+*.obj
+
+# Library files
+*.lib
+*.a
+
+# Shared objects (Linux/Unix)
+*.so
+*.dylib
+
+# Executable files
+*.exe
+
+# Debug files
+*.dSYM
+*.pdb
+
+# Configuration files
+*.conf
+*.ini
+*.cfg
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build directories
+build/
+dist/
+
+# Dependency directories
+jspm_packages/
+bower_components/
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+
+# Dependency directories
+dependencies/
