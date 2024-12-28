@@ -52,4 +52,4 @@ logs/
 .env
 
 # Dependency directories
-dependencies/
+dependencies/*
