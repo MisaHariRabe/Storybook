@@ -30,32 +30,54 @@ const AddStoryForm = ({ addStory }) => {
         setStory("");
     };
 
+    const styles = {
+        form: {
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '10px',
+            padding: '20px',
+            fontFamily: 'Arial, sans-serif'
+        },
+        input: {
+            padding: '10px',
+            fontSize: '1em',
+            borderRadius: '5px',
+            border: '1px solid #ccc'
+        },
+        textarea: {
+            padding: '10px',
+            fontSize: '1em',
+            borderRadius: '5px',
+            border: '1px solid #ccc',
+            height: '100px'
+        },
+        button: {
+            padding: '10px 20px',
+            fontSize: '1em',
+            borderRadius: '5px',
+            border: 'none',
+            backgroundColor: '#333',
+            color: '#fff',
+            cursor: 'pointer'
+        }
+    };
+
     return (
-        <>
-            <form className="form-container" onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label htmlFor="title" className="form-label">Title</label><br />
-                    <input
-                        value={title}
-                        onChange={handleTitleChange}
-                        type="text"
-                        placeholder="Enter your title"
-                        id="title"
-                        className="form-control"
-                    />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="story" className="form-label">Story</label><br />
-                    <textarea
-                        value={story}
-                        onChange={handleStoryChange}
-                        placeholder="Enter your story"
-                        id="story"
-                        className="form-control"
-                    ></textarea>
-                </div>
-                <button className="btn btn-primary" type="submit">Save story</button>
-            </form>
-        </>
+        <form onSubmit={handleSubmit} style={styles.form}>
+            <input
+                type="text"
+                placeholder="Title"
+                value={title}
+                onChange={handleTitleChange}
+                style={styles.input}
+            />
+            <textarea
+                placeholder="Story"
+                value={story}
+                onChange={handleStoryChange}
+                style={styles.textarea}
+            />
+            <button type="submit" style={styles.button}>Add Story</button>
+        </form>
     );
 };
