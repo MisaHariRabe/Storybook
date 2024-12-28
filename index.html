@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Storybook</title>
+    <script src="./dependencies/react.development.js" type="module"></script>
+    <script src="./dependencies/react-dom.development.js" type="module"></script>
+    <script src="./dependencies/babel.min.js" type="module"></script>
+    <link rel="stylesheet" href="./public/css/styles.css">
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- Components -->
+
+    <script src="./components/Counter.js" type="text/babel"></script>
+    <script src="./components/Dropdown.js" type="text/babel"></script>
+    <script src="./components/AddStoryForm.js" type="text/babel"></script>
+    <script src="./components/StoryList.js" type="text/babel"></script>
+    <script src="./App.js" type="text/babel"></script>
+
+    <!-- React Configuration -->
+
+    <script type="text/babel">
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>
