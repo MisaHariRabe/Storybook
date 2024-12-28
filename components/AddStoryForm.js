@@ -13,7 +13,11 @@ const AddStoryForm = ({ addStory }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const actualDate = new Date().getDate() + "/" + (new Date().getMonth() + 1) + "/" + new Date().getFullYear();
+        const actualDate =
+            new Date().getDate() + "/"
+            + (new Date().getMonth() + 1) + "/"
+            + new Date().getFullYear();
+
         const newStory = { title, story, date: actualDate };
 
         addStory(newStory);
